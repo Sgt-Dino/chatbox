@@ -61,7 +61,7 @@ input {
 label {
   font-size: 12px;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 1px;
   display: block;
 }
 
@@ -130,4 +130,26 @@ label {
   margin-bottom: 10px;
   border-radius: 3px;
   background-color: rgb(250, 250, 250);
+}
+
+.chatmessage {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.username {
+  font-size: 11px;
+}
+
+.card-chat {
+  padding: 10px 10px;
+}
+
+div.ex3 {
+  background-color: rgb(235, 250, 255);
+  width: 1130px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: auto;
 }

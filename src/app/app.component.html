@@ -1,6 +1,6 @@
 <div class="jumbotron text-center">
-  <h1>chat_Box</h1>
-  <p>Welcome to chatbox mainchat</p>
+  <h1>________ chat_Box ________</h1>
+  <p>Welcome to the chatbox chatroom</p>
 
 </div>
 
@@ -8,45 +8,48 @@
   <router-outlet>
 
     <div class="form-group">
-      <label>Enter a Username if you want to (it can be changed)</label>
-      <input name="user" class="form-control" type="text" (focusout)="changeUser(user.value)" #user >
+      <label>
+        Enter a Username if you want to (it can be changed)
+      </label>
+      <input
+        name="user"
+        class="form-control"
+        type="text"
+        (focusout)="changeUser(user.value)"
+        #user
+      >
     </div>
 
-<h2>the_chat_history:</h2>
-<div class="container" *ngFor="let chat of mainchat | async as chater">
-<div class="card bg-light text-black">
-  <div class="card-body">
-    <label>{{ chat.user }}</label>
-    {{ chat.message }}
+    <h2>_chat_history:</h2>
+    <div class="ex3">
+    <div class="container" *ngFor="let chat of mainchat | async as chater">
+      <div class="card bg-light text-black">
+        <div class="card-body card-chat">
+          <label
+            class="username">
+            {{ chat.user }}
+          </label>
+          <label
+            class="chatmessage">
+            {{ chat.message }}
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
+    <br/>
 
-<br/>
-
-<div class="form-group">
-  <label>Input text</label>
-  <input class="form-control" type="text" (keyup.enter)="add(chat)" #chat >
-</div>
-
-
-<!-- <div class="form-group">
-  <h6>Input Text</h6>
-  <textarea class="form-control" rows="4" id="comment" type="text" (keyup.enter)="add(chat)" #chat></textarea>
-</div> -->
-<!-- <button class="btn btn-primary">Enter</button> -->
+    <div class="form-group">
+      <label>
+        Input text
+      </label>
+      <input
+        class="form-control"
+        type="text"
+        (keyup.enter)="add(chat)"
+        #chat
+      >
+    </div>
 
   </router-outlet>
 </div>
-
-
-<!-- <div>
-  <input type="text" (keyup.enter)="add(chat.value)" #chat >
-</div> -->
-
-
-<!-- <div class="form-group">
-  <h6>Input Text</h6>
-  <textarea class="form-control" rows="4" id="comment" type="text" (keyup.enter)="add(chat)" #chat></textarea>
-</div> -->
-<!-- <button class="btn btn-primary">Enter</button> -->
