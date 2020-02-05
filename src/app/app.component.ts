@@ -28,10 +28,10 @@ export class AppComponent {
 
   add(chat: HTMLInputElement) {
     this.item.push({
-      message: chat,
+      message: chat.value,
       user: this.user
     });
-    chat.textContent = '';
+    chat.value = '';
   }
 
   changeUser(user){
